@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+
+/* what we need to do is to create a new class and switch the colors. Primary color will be #fff9f9 and secondary color will be #161616 */
+
+.light-theme {
+    --primary-clr: #fff9f9;
+    --primary-rgba-7: rgba(255, 255, 255, 0.4);
+    --secondary-clr: #161616;
+    --secondary-rgba-3: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: linear-gradient(360deg, #FF717AFF -20%, #71C4FFFF 100%);
+    background-repeat: no-repeat;
+    min-height: 50rem;
+    overflow-x: hidden;
+}
+
+.card {
+    width: clamp(300px, 92vw, 400px);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    box-shadow: 0 0 1rem var(--primary-rgba-7);
+    border-radius: 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border: none;
+    width: 350px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container {
+    width: 270px;
+    height: 40px;
+}
+
+.search-container input {
+    /* as default 40px width and 0 padding */
+    width: 40px;
+    height: 100%;
+    position: relative;
+    font-size: 1.2rem;
+    padding: 0;
+    outline: none;
+    border-radius: 100vw;
+    border: none;
+    box-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+    background-color: transparent;
+    border: 2px solid black;
+    color: blue;
+    transition: 200ms ease-in-out width, 200ms ease-in-out;
+}
+
+::placeholder {
+    color: red;
+    font-weight: 500;
+}
+
+.search-icon {
+    background-color: crimson;
+    box-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-clr);
+    cursor: pointer;
+    transition: 200ms ease-in-out background-color, 200ms ease-in-out color;
+    position: relative;
+    bottom: 40px;
+}
+
+.search-icon:hover {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    color: #161616;
+}
+
+.search-icon:hover {
+    animation: rotate 0.3s linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(3600deg);
+    }
+}
+
+.search-icon:active {
+    transform: scale(0.8) translateY(50%);
+}
+
+.search-container:hover input,
+.search-container input:focus {
+    width: 110%;
+    padding: 0 0 0 3rem;
+}
+
+#random{
+    position: relative;
+    padding: 1em;
+    border-radius: 15px;
+    border: none;
+    background-color: crimson;
+    color: white;
+}
+
+#random:hover {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    transform: scale(1.2);
+
+}
+
+#random:hover {
+    color: black;
+}
+footer{
+    margin-top: 3rem;
+  }
