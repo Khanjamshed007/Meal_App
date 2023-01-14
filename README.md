@@ -3,6 +3,11 @@
 This Is My Hosted Link-https://jamshedkhan007.github.io/Meal_App/
 
 Meal_App Using Vanilla Javascript
+
+
+
+
+
 *Home Page
 Search any meal from the API and display the search results on the frontend (as I type the search results should update, just like Google does for suggestions).
 Each search result of the meal should have a favourite button, clicking on which the meal should be added to “My favourite meals” (a list).
